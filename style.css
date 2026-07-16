@@ -4,26 +4,102 @@ font-family:Arial,sans-serif;
 background:#f5f5f5;
 }
 
+/* HEADER */
+
 header{
+
 background:#2e8b57;
+padding:15px 20px;
 color:white;
-padding:20px;
+
+}
+
+/* LOGO + TITLE */
+
+.header-container{
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.logo{
+
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 3px 10px rgba(0,0,0,.3);
+
+}
+
+.restaurant-info{
+
 text-align:center;
+
+}
+
+.restaurant-info h1{
+
+font-size:42px;
+margin:0;
+
+}
+
+.restaurant-info p{
+
+font-size:20px;
+margin-top:8px;
+
+}
+/* STICKY MENU */
+
+.navbar{
+
 position:sticky;
 top:0;
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+
+margin-top:20px;
+
+background:#2e8b57;
+
+padding:10px;
+
+z-index:1000;
+
 }
 
-nav{
-margin-top:15px;
-}
+.navbar a{
 
-nav a{
 color:white;
 text-decoration:none;
-margin:12px;
+
+font-size:17px;
+
 font-weight:bold;
+
+padding:8px 15px;
+
+border-radius:30px;
+
+transition:.3s;
+
 }
 
+.navbar a:hover{
+
+background:white;
+color:#2e8b57;
+
+}
 section{
 padding:30px;
 }
@@ -157,4 +233,87 @@ nav a:hover{
 .special-card h4{
     color:#c62828;
     font-size:28px;
+}
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+.logo{
+
+width:70px;
+height:70px;
+
+}
+
+.restaurant-info h1{
+
+font-size:30px;
+
+}
+
+.restaurant-info p{
+
+font-size:16px;
+
+}
+
+.navbar{
+
+gap:6px;
+
+padding:8px;
+
+}
+
+.navbar a{
+
+font-size:14px;
+
+padding:6px 10px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.header-container{
+
+flex-direction:column;
+
+}
+
+.restaurant-info h1{
+
+font-size:26px;
+
+}
+
+.restaurant-info p{
+
+font-size:15px;
+
+}
+
+.logo{
+
+width:65px;
+height:65px;
+
+}
+
+.navbar{
+
+justify-content:center;
+
+}
+
+.navbar a{
+
+font-size:13px;
+
+padding:5px 8px;
+
+}
+
 }
