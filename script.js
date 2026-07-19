@@ -1,15 +1,33 @@
-window.addEventListener("scroll",function(){
+const menuBtn=document.getElementById("menuBtn");
 
-const header=document.querySelector(".header-container");
+const menu=document.getElementById("menuPanel");
 
-if(window.scrollY>100){
+menuBtn.onclick=function(){
 
-header.style.display="none";
-
-}else{
-
-header.style.display="flex";
+menu.classList.toggle("show");
 
 }
 
-});
+// Hide menu after clicking a link
+
+document.querySelectorAll("#menuPanel a").forEach(link=>{
+
+link.onclick=function(){
+
+menu.classList.remove("show");
+
+}
+
+})
+
+// Hide menu when clicking outside
+
+document.addEventListener("click",function(e){
+
+if(!menu.contains(e.target) && e.target!==menuBtn){
+
+menu.classList.remove("show");
+
+}
+
+})
